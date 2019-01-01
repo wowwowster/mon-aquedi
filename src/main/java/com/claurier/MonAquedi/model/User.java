@@ -26,7 +26,7 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    @SequenceGenerator(name = "generator", sequenceName = "test.user_id_seq")
+    @SequenceGenerator(name = "generator", sequenceName = "test.user_id_seq", allocationSize=1)
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name="user_id", unique=true, nullable=false)
