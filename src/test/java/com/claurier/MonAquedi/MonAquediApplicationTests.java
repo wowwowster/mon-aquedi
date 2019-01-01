@@ -14,6 +14,8 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Transactional
+@Rollback(false)
 public class MonAquediApplicationTests {
 
     @Autowired
@@ -26,12 +28,11 @@ public class MonAquediApplicationTests {
 
 
 	@Test
-	@Transactional
-    @Rollback(false)
 	public void testGenerateId() {
 	    try {
             List<User> userList =userRepository.findAll();
-            Employee employee = new Employee("Administrator");
+           User user = new User("Administrator");
+            userRepository.save(user);
         } catch (Exception e) {
 	        e.printStackTrace();
         }

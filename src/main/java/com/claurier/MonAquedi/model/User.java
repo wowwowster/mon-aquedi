@@ -1,14 +1,9 @@
 package com.claurier.MonAquedi.model;
 
 import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name="user", schema = "test")
@@ -31,8 +26,10 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    @Id @GeneratedValue(strategy= GenerationType.TABLE)
-    @Column(name="user_id")
+    @SequenceGenerator(name = "generator", sequenceName = "test.user_id_seq")
+    @Id
+    @GeneratedValue(strategy = SEQUENCE, generator = "generator")
+    @Column(name="user_id", unique=true, nullable=false)
     public Long getUserId() {
         return userId;
     }
