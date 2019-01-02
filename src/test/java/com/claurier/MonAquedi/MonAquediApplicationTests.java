@@ -2,6 +2,7 @@ package com.claurier.MonAquedi;
 
 import com.claurier.MonAquedi.model.Employee;
 import com.claurier.MonAquedi.model.User;
+import com.claurier.MonAquedi.repository.EmployeeRepository;
 import com.claurier.MonAquedi.repository.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,6 +22,8 @@ public class MonAquediApplicationTests {
     @Autowired
     private UserRepository userRepository;
 
+	@Autowired
+	private EmployeeRepository employeeRepository;
 
 	@Test
 	public void contextLoads() {
@@ -31,8 +34,10 @@ public class MonAquediApplicationTests {
 	public void testGenerateId() {
 	    try {
             List<User> userList =userRepository.findAll();
-           User user = new User("Administrator");
-            userRepository.save(user);
+           //User user = new User("Administrator");
+			// userRepository.save(user);
+            Employee employee = new Employee("Administrator","Mon titre");
+            employeeRepository.save(employee);
         } catch (Exception e) {
 	        e.printStackTrace();
         }

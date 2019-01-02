@@ -21,7 +21,7 @@ public class Employee extends User implements Serializable {
     public Employee() {}
 
 
-    public Employee(String username) {
+    public Employee(String username, String title) {
         super(username);
         this.title = title;
     }
