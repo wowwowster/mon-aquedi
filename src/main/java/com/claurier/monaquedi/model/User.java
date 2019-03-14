@@ -1,4 +1,4 @@
-package com.claurier.MonAquedi.model;
+package com.claurier.monaquedi.model;
 
 import java.io.Serializable;
 import javax.persistence.*;

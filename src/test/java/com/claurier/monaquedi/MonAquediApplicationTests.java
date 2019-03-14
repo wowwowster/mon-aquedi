@@ -1,9 +1,9 @@
-package com.claurier.MonAquedi;
+package com.claurier.monaquedi;
 
-import com.claurier.MonAquedi.model.Employee;
-import com.claurier.MonAquedi.model.User;
-import com.claurier.MonAquedi.repository.EmployeeRepository;
-import com.claurier.MonAquedi.repository.UserRepository;
+import com.claurier.monaquedi.model.Employee;
+import com.claurier.monaquedi.model.User;
+import com.claurier.monaquedi.repository.EmployeeRepository;
+import com.claurier.monaquedi.repository.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

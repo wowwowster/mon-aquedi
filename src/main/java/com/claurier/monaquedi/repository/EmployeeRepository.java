@@ -1,7 +1,7 @@
-package com.claurier.MonAquedi.repository;
+package com.claurier.monaquedi.repository;
 
-import com.claurier.MonAquedi.model.Employee;
-import com.claurier.MonAquedi.model.User;
+import com.claurier.monaquedi.model.Employee;
+import com.claurier.monaquedi.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

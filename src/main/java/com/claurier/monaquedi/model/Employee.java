@@ -1,7 +1,6 @@
-package com.claurier.MonAquedi.model;
+package com.claurier.monaquedi.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.*;
 
 @Entity

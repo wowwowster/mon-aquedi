@@ -1,17 +1,4 @@
-insert into test.user ( user_name) VALUES ('nom C')
-
-DELETE FROM test.user WHERE user_name like '%Admin%'
-
-CREATE SEQUENCE test.user_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-ALTER TABLE test.user ALTER COLUMN user_id SET DEFAULT nextval('test.user_id_seq'::regclass) ;
-
-CREATE TABLE unite_mesure (
+CREATE TABLE test.unite_mesure (
     unite_mesure_id integer NOT NULL,
     cd_unite_mesure character varying,
     cd_unite_mesure_scheme_agency_id character varying,
@@ -27,9 +14,11 @@ CREATE TABLE unite_mesure (
     nom_int_unite_mesure character varying
 );
 
-CREATE SEQUENCE unite_mesure_unite_mesure_id_seq
+CREATE SEQUENCE test.unite_mesure_unite_mesure_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
+
+ALTER TABLE test.unite_mesure ALTER COLUMN unite_mesure_id SET DEFAULT nextval('test.unite_mesure_unite_mesure_id_seq'::regclass) ;
